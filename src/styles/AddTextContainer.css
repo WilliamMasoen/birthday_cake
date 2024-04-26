@@ -1,0 +1,8 @@
+.add-text-container {
+    /* display: block; */
+    color: white;
+}
+
+.add-text-container-inactive {
+    display: none;
+}
