@@ -1,7 +1,13 @@
-import { useState } from "react";
 import "../styles/AddTextContainer.css";
+// import { useState } from "react";
 
-const [status, setStatus] = useState(false);
+let status = false;
+
+export const showPopup = () => {
+  status = !status;
+  //   AddTextContainer(status);
+  console.log(status);
+};
 
 function AddTextContainer() {
   return (
@@ -15,8 +21,6 @@ function AddTextContainer() {
       >
         Hello World
       </div>
-
-      <div>Hello world</div>
     </>
   );
 }
