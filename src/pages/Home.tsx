@@ -1,14 +1,21 @@
 import "../styles/Home.css";
 import AddTextButton from "../components/AddTextButton";
 import AddTextContainer from "../components/AddTextContainer";
+import { useState } from "react";
 
 function Home() {
+  const [status, setStatus] = useState<boolean>(false);
+
+  const toggleStatus = () => {
+    setStatus(!status);
+  };
+
   return (
     <>
       <div className="top-container">
         {/* Add Text Popup Button */}
         <div>
-          <AddTextButton />
+          <AddTextButton onClick={toggleStatus} />
         </div>
 
         {/* Refresh Button */}
@@ -22,7 +29,7 @@ function Home() {
 
         {/* Add Text Popup Container */}
         <div>
-          <AddTextContainer />
+          <AddTextContainer status={status} />
         </div>
       </div>
 

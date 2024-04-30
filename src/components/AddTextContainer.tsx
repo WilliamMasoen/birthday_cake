@@ -1,22 +1,16 @@
 import "../styles/AddTextContainer.css";
 import { useState } from "react";
 
-let status = false;
-
-export const showPopup = () => {
-  status = !status;
-  //   AddTextContainer(status);
-  console.log(status);
-};
-
 interface Content {
   title: string;
   description: string;
 }
 
-function AddTextContainer() {
-  const [status, setStatus] = useState(1);
+interface AddTextContainerProps {
+  status: boolean;
+}
 
+function AddTextContainer({ status }: AddTextContainerProps) {
   const [Content, setContent] = useState<Content>({
     title: "",
     description: "",
@@ -26,7 +20,7 @@ function AddTextContainer() {
     <>
       <div
         className={
-          status === 1 ? "add-text-container" : "add-text-container-inactive"
+          status === true ? "add-text-container" : "add-text-container-inactive"
         }
       >
         <form className="add-text-form">

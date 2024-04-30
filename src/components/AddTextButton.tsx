@@ -1,14 +1,14 @@
 import "../styles/AddTextButton.css";
-import { showPopup } from "./AddTextContainer";
 
-function AddTextButton() {
-  const openPopup = () => {
-    showPopup();
-  };
+interface AddTextButtonProps {
+  onClick: () => void;
+}
+
+function AddTextButton({ onClick }: AddTextButtonProps) {
   return (
     <>
       <div className="add-text-button-container">
-        <button className="add-text-button" onClick={openPopup}>
+        <button className="add-text-button" onClick={onClick}>
           <span>Add Message</span>
         </button>
       </div>
