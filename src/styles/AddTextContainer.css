@@ -1,7 +1,5 @@
 .add-text-container {
-    width: 80%;
-    height: 700px;
-    margin-top: 25px;
+    width: 100%;
     background-color: #30313C;
     border-radius: 20px;
     display: flex;
@@ -54,19 +52,48 @@
 
 .add-text-buttons-container {
     margin-top: 25px;
+    margin-bottom: 25px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    /* border: 2px red solid; */
     width: 100%;
 }
 
 .add-text-cancel-button-container {
     /* margin-right: 0; */
-    border-radius: 3%;
 }
 
 .add-text-submit-button-container {
     margin-left: 30px;
+    /* border-radius: 3%; */
+}
+
+#add-text-cancel-button {
+    color: red;
+    background-color: transparent;
+    border: none;
+    font-family: Jura;
+    font-size: large;
+    padding: 7px 10px 7px 10px;
+}
+
+#add-text-submit-button {
+    background-color: hsl(243, 80%, 62%);
+    color: white;
+    padding: 7px 10px 7px 10px;
+    font-family: Jura;
+    font-size: medium;
+    border: none;
     border-radius: 3%;
 }
+
+#add-text-cancel-button:hover, #add-text-submit-button:hover {
+    cursor: pointer;
+    transition: transform 0.2s;
+    transform: scale(1.07);
+}
+
+/* Decrease padding of the form */
+/* Increase font and font size of placeholder values */
+/* Make title box taller */
+/* Move description placeholder value to the middle */

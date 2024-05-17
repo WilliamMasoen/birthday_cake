@@ -7,7 +7,32 @@ function Home() {
   const [status, setStatus] = useState<boolean>(false);
 
   const toggleStatus = () => {
+    if (tmpContent.title.trim() !== "") {
+      setContent({
+        ...content,
+        title: tmpContent.title,
+        description: tmpContent.description,
+      });
+    }
+
     setStatus(!status);
+  };
+
+  const [content, setContent] = useState({
+    title: "",
+    description: "",
+  });
+
+  const [tmpContent, setTmpContent] = useState({
+    title: "",
+    description: "",
+  });
+
+  const handleTmpContent = (name: string, value: string) => {
+    setTmpContent({
+      ...tmpContent,
+      [name]: value,
+    });
   };
 
   return (
@@ -23,13 +48,26 @@ function Home() {
       </div>
 
       <div className="middle-container">
-        {/* Birthday Cake */}
+        <div className="cake-caption-container">
+          {/* Birthday Cake */}
+          <div className="cake-container"></div>
 
-        {/* Birthday Caption */}
+          {/* Birthday Caption */}
+          <div className="caption-container">
+            <p className="caption">Title: {content.title}</p>
+            <p className="caption">Content: {content.description}</p>
+          </div>
+        </div>
 
         {/* Add Text Popup Container */}
-        <div>
-          <AddTextContainer status={status} />
+        <div className="popup-container">
+          <AddTextContainer
+            status={status}
+            content={content}
+            tmpContent={tmpContent}
+            onChange={handleTmpContent}
+            onClick={toggleStatus}
+          />
         </div>
       </div>
 

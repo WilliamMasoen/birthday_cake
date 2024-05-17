@@ -1,0 +1,19 @@
+.caption {
+    color: white;
+}
+
+.middle-container {
+    display: flex;
+    justify-content: center;
+}
+
+.caption-container {
+
+}
+
+.popup-container {
+    position: absolute;
+    width: 80%;
+    height: 700px;
+    margin-top: 50px;
+}
