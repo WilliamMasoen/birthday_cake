@@ -1,6 +1,7 @@
 import "../styles/Home.css";
 import AddTextButton from "../components/AddTextButton";
 import AddTextContainer from "../components/AddTextContainer";
+import BirthdayCake from "../components/BirthdayCake";
 import FooterContainer from "../components/FooterContainer";
 import { useState } from "react";
 import { MdOutlineRefresh } from "react-icons/md";
@@ -58,7 +59,9 @@ function Home() {
       <div className="middle-container">
         <div className="cake-caption-container">
           {/* Birthday Cake */}
-          <div className="cake-container"></div>
+          <div className="cake-container">
+            <BirthdayCake />
+          </div>
 
           {/* Birthday Caption */}
           <div className="caption-container">
