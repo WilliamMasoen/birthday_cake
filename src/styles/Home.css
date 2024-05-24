@@ -1,5 +1,24 @@
+.top-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#refresh-button {
+    color: white;
+    font-size: 50px;
+    margin-right: 25px;
+    margin-top: 10px;
+}
+
+#refresh-button:hover {
+    cursor: pointer;
+    transition: transform 0.2s;
+    transform: scale(1.07);
+}
+
 .caption {
     color: white;
+    word-break: break-all;
 }
 
 .middle-container {
@@ -13,7 +32,7 @@
 
 .popup-container {
     position: absolute;
-    width: 80%;
+    width: 70%;
     height: 700px;
     margin-top: 50px;
 }

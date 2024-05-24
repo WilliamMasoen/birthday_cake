@@ -20,7 +20,7 @@
 
 .add-text-title-container {
     /* border: 2px red solid; */
-    margin-top: 20px;
+    margin-top: 40px;
     width: 100%;
     display: flex;
     border-radius: 20px;
@@ -29,11 +29,17 @@
 
 #add-text-title-label {
     color: white;
+    font-size: x-large;
+    text-align: center;
+    line-height: 60px;
 }
 
 #add-text-title-input {
     margin-left: 20px;
     flex-grow: 1;
+    padding: 20px;
+    font-family: Arial;
+    font-size: x-large;
     border-radius: 5px;
     border: none;
 }
@@ -42,12 +48,21 @@
     margin-top: 25px;
     display: flex;
     width: 100%;
+    text-wrap: wrap;
+    word-wrap: break-word;
 }
 
 #add-text-description-input {
     height: 500px;
     width: 100%;
     border-radius: 10px;
+    font-size: x-large;
+    font-family: Arial;
+}
+
+#add-text-description-input::placeholder {
+    text-align: center;
+    line-height: 490px;
 }
 
 .add-text-buttons-container {
@@ -65,7 +80,6 @@
 
 .add-text-submit-button-container {
     margin-left: 30px;
-    /* border-radius: 3%; */
 }
 
 #add-text-cancel-button {
@@ -73,7 +87,7 @@
     background-color: transparent;
     border: none;
     font-family: Jura;
-    font-size: large;
+    font-size: x-large;
     padding: 7px 10px 7px 10px;
 }
 
@@ -82,9 +96,10 @@
     color: white;
     padding: 7px 10px 7px 10px;
     font-family: Jura;
-    font-size: medium;
+    font-size: x-large;
     border: none;
     border-radius: 3%;
+    margin: auto;
 }
 
 #add-text-cancel-button:hover, #add-text-submit-button:hover {
@@ -92,8 +107,3 @@
     transition: transform 0.2s;
     transform: scale(1.07);
 }
-
-/* Decrease padding of the form */
-/* Increase font and font size of placeholder values */
-/* Make title box taller */
-/* Move description placeholder value to the middle */

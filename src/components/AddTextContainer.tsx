@@ -64,7 +64,7 @@ function AddTextContainer({
             />
           </div>
           <div className="add-text-content-container">
-            <input
+            <textarea
               type="text"
               name="description"
               id="add-text-description-input"

@@ -3,6 +3,7 @@ import AddTextButton from "../components/AddTextButton";
 import AddTextContainer from "../components/AddTextContainer";
 import FooterContainer from "../components/FooterContainer";
 import { useState } from "react";
+import { MdOutlineRefresh } from "react-icons/md";
 
 function Home() {
   const [status, setStatus] = useState<boolean>(false);
@@ -36,6 +37,10 @@ function Home() {
     });
   };
 
+  const refreshPage = () => {
+    window.location.reload();
+  };
+
   return (
     <>
       <div className="top-container">
@@ -45,7 +50,9 @@ function Home() {
         </div>
 
         {/* Refresh Button */}
-        <div></div>
+        <div>
+          <MdOutlineRefresh onClick={refreshPage} id="refresh-button" />
+        </div>
       </div>
 
       <div className="middle-container">
