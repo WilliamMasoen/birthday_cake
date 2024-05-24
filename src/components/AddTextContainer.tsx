@@ -1,5 +1,5 @@
 import "../styles/AddTextContainer.css";
-import { useState } from "react";
+// import { useState } from "react";
 
 // Things to improve:
 // - Only change caption upon submission

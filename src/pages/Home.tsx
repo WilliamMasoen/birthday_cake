@@ -1,6 +1,7 @@
 import "../styles/Home.css";
 import AddTextButton from "../components/AddTextButton";
 import AddTextContainer from "../components/AddTextContainer";
+import FooterContainer from "../components/FooterContainer";
 import { useState } from "react";
 
 function Home() {
@@ -71,7 +72,12 @@ function Home() {
         </div>
       </div>
 
-      <div className="bottom-container">{/* Footer Button */}</div>
+      <div className="bottom-container">
+        {/* Footer Button */}
+        <div>
+          <FooterContainer />
+        </div>
+      </div>
     </>
   );
 }
