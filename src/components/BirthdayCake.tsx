@@ -2,6 +2,8 @@ import "../styles/BirthdayCake.css";
 import cake from "../assets/images/cake.png";
 
 function BirthdayCake() {
+  const blowCandle = () => {};
+
   return (
     <>
       <div className="whole-cake-container">

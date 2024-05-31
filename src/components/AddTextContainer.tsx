@@ -1,11 +1,6 @@
 import "../styles/AddTextContainer.css";
 // import { useState } from "react";
 
-// Things to improve:
-// - Only change caption upon submission
-// - Don't change caption upon cancellation
-// - Ensure after the first submission of the caption, the rule of the title being required is still applied
-
 interface Content {
   title: string;
   description: string;

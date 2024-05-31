@@ -21,6 +21,12 @@ body {
   padding: 0px;
 }
 
+#root {
+  height: 100%;
+  /* bottom: 0; */
+}
+
+
 /* ::-webkit-scrollbar {
   width: 20px;
 }
