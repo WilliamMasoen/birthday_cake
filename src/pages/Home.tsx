@@ -1,12 +1,11 @@
 import "../styles/Home.css";
 import AddTextButton from "../components/AddTextButton";
 import AddTextContainer from "../components/AddTextContainer";
-import BirthdayCake from "../components/BirthdayCake";
 import FooterContainer from "../components/FooterContainer";
 import { useState } from "react";
 import { MdOutlineRefresh } from "react-icons/md";
 import ConfettiComponent from "../components/Confetti";
-import AudioLevelMeter from "../components/AudioLevelMeter";
+import BirthdayCake from "../components/BirthdayCake";
 
 function Home() {
   const [status, setStatus] = useState<boolean>(false);
@@ -60,11 +59,7 @@ function Home() {
 
       <div className="middle-container">
         <div className="cake-caption-container">
-          <div className="audio-level-container">
-            <AudioLevelMeter />
-          </div>
-          {/* Birthday Cake */}
-          <div className="cake-container">
+          <div>
             <BirthdayCake />
           </div>
 
@@ -96,9 +91,9 @@ function Home() {
         <div>
           <FooterContainer />
         </div>
-        <div className="confetti-button-container">
+        {/* <div className="confetti-button-container">
           <ConfettiComponent />
-        </div>
+        </div> */}
       </div>
     </>
   );

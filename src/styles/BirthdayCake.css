@@ -1,0 +1,30 @@
+.birthday-cake-container {
+    border: 2px solid red;
+}
+
+.candle-container-active {
+    background-color: yellow;
+}
+
+.candle-container-inactive {
+    background-color: none;
+}
+
+.cake-container {
+    border: 2px solid yellow;
+}
+
+/* ------------- */
+.temp {
+    border: 2px solid pink;
+}
+
+.audio-level-container {
+    width: 80%;
+    margin: auto;
+}
+
+.audio-level-text {
+    color: white;
+    font-size: xx-large;
+}

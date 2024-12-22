@@ -64,18 +64,14 @@
 
 .bottom-container {
     width: 100%;
-    min-height: 20%;
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row;
     justify-content: space-between;
+    min-height: 20%; */
 }
 
-.footer-container {
-
-}
-
-.confetti-button-container {
+/* .confetti-button-container {
     margin: 0px 20px 20px 0px;
     display: flex;
     align-items: end;
-}
+} */
