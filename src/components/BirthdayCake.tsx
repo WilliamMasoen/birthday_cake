@@ -108,8 +108,8 @@ const BirthdayCake: React.FC = () => {
               : "candle-flame-active"
           }`}
           style={{
-            width: `${20 * flameScale}px`, // Flame shrinks proportionally
-            height: `${40 * flameScale}px`,
+            width: `${30 * flameScale}px`, // Flame shrinks proportionally
+            height: `${50 * flameScale}px`,
             top: `${40 * (1 - flameScale)}px`,
             opacity: flameScale, // Opacity decreases as the flame shrinks
           }}
