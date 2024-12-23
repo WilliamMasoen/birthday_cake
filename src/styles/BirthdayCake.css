@@ -84,3 +84,95 @@
 .candle-body-inactive {
   box-shadow: none;
 }  
+
+
+@media only screen and (min-width: 0px) {
+  .candle-container {
+    top: 60px;
+    width: 10px;
+    height: 70px;
+  }
+  
+  .candle-body {
+    width: 10px;
+    height: 43px;
+  }
+
+  .cake-image {
+    width: 350px;
+    height: 200px;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  .candle-container {
+    top: 70px;
+    width: 13px;
+    height: 85px;
+  }
+  
+  .candle-body {
+    width: 13px;
+    height: 50px;
+  }
+
+  .cake-image {
+    width: 400px;
+    height: 250px;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .candle-container {
+    top: 80px;
+    width: 15px;
+    height: 100px;
+  }
+  
+  .candle-body {
+    width: 15px;
+    height: 60px;
+  }
+
+  .cake-image {
+    width: 500px;
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .candle-container {
+    top: 90px;
+    width: 17px;
+    height: 110px;
+  }
+  
+  .candle-body {
+    width: 17px;
+    height: 65px;
+  }
+
+  .cake-image {
+    width: 550px;
+    height: 350px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .candle-container {
+    top: 100px;
+    width: 20px;
+    height: 120px;
+  }
+  
+  .candle-body {
+    width: 20px;
+    height: 70px;
+  }
+
+  .cake-image {
+    width: 600px;
+    height: 400px;
+  }
+}
+
