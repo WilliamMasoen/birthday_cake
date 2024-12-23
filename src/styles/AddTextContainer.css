@@ -67,7 +67,7 @@
   .add-text-buttons-container {
     display: flex;
     justify-content: flex-end;
-    gap: 20px;
+    gap: 10px;
   }
   
   #add-text-cancel-button,
@@ -94,7 +94,6 @@
   #add-text-cancel-button:hover,
   #add-text-submit-button:hover {
     cursor: pointer;
-    transform: scale(1.1);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   }
   
