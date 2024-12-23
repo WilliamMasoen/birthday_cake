@@ -1,6 +1,7 @@
 import "../styles/BirthdayCake.css";
 import React, { useEffect, useRef, useState } from "react";
 import ConfettiComponent from "./Confetti";
+import SongComponent from "./Song.tsx";
 import cake from "../assets/images/cake.png";
 
 const BirthdayCake: React.FC = () => {
@@ -17,7 +18,7 @@ const BirthdayCake: React.FC = () => {
   const dataArrayRef = useRef<Uint8Array | null>(null);
 
   // Threshold value to determine when the candle gets extinguished
-  const threshold = 400;
+  const threshold = 1000;
 
   useEffect(() => {
     // Function to initialize audio processing
@@ -94,6 +95,7 @@ const BirthdayCake: React.FC = () => {
   return (
     <div className="birthday-cake-container">
       <ConfettiComponent isActive={isCandleExtinguished} />
+      <SongComponent isActive={isCandleExtinguished} />
       <p className="audio-level-text">
         Audio Level: {(audioLevel * 1000).toFixed(2)}
       </p>

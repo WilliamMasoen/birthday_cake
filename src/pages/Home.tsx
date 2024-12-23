@@ -4,7 +4,6 @@ import AddTextContainer from "../components/AddTextContainer";
 import FooterContainer from "../components/FooterContainer";
 import { useState } from "react";
 import { MdOutlineRefresh } from "react-icons/md";
-import ConfettiComponent from "../components/Confetti";
 import BirthdayCake from "../components/BirthdayCake";
 
 function Home() {
@@ -90,9 +89,6 @@ function Home() {
         {/* Footer Button */}
         <div>
           <FooterContainer />
-        </div>
-        <div className="confetti-button-container">
-          <ConfettiComponent />
         </div>
       </div>
     </>
