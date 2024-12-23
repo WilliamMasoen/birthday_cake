@@ -16,12 +16,19 @@ interface AddTextContainerProps {
 
 function AddTextContainer({
   status,
-  content,
+  // content,
   tmpContent,
   onChange,
   onClick,
 }: AddTextContainerProps) {
   const handleContentChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    onChange(name, value);
+  };
+
+  const handleContentChangeTextArea = (
+    e: React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     onChange(name, value);
   };
@@ -61,12 +68,11 @@ function AddTextContainer({
           <div className="add-text-content-container">
             <label id="add-text-title-label">Message</label>
             <textarea
-              type="text"
               name="description"
               id="add-text-description-input"
               placeholder="Add Description (Optional)"
               value={tmpContent.description}
-              onChange={handleContentChange}
+              onChange={handleContentChangeTextArea}
             />
           </div>
           <div className="add-text-buttons-container">
