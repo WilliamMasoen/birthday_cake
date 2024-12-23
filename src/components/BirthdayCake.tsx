@@ -17,6 +17,21 @@ const BirthdayCake: React.FC = () => {
   const analyserRef = useRef<AnalyserNode | null>(null);
   const dataArrayRef = useRef<Uint8Array | null>(null);
 
+  const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
+
+  useEffect(() => {
+    // Update the screen width on resize
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   // Threshold value to determine when the candle gets extinguished
   const threshold = 500;
 
@@ -92,13 +107,38 @@ const BirthdayCake: React.FC = () => {
     0
   );
 
+  // Set responsive values based on screen size (Below is for largest screen size)
+  let flameWidth = 30 * flameScale;
+  let flameHeight = 50 * flameScale;
+  let flameTop = 40 * (1 - flameScale);
+
+  // Adjust the flame size based on screen width
+  if (screenWidth < 540) {
+    // Small screen
+    flameWidth *= 0.6;
+    flameHeight *= 0.6;
+  } else if (screenWidth < 640) {
+    flameWidth *= 0.75;
+    flameHeight *= 0.75;
+  } else if (screenWidth < 768) {
+    flameWidth *= 0.85;
+    flameHeight *= 0.85;
+  } else if (screenWidth < 1025) {
+    flameWidth *= 0.92;
+    flameHeight *= 0.92;
+  } else {
+    // Large screen
+    flameWidth *= 1;
+    flameHeight *= 1;
+  }
+
   return (
     <div className="birthday-cake-container">
       <ConfettiComponent isActive={isCandleExtinguished} />
       <SongComponent isActive={isCandleExtinguished} />
-      <p className="audio-level-text">
+      {/* <p className="audio-level-text">
         Audio Level: {(audioLevel * 1000).toFixed(2)}
-      </p>
+      </p> */}
       <div className="candle-container">
         <div className="candle-body" />
         <div
@@ -108,9 +148,9 @@ const BirthdayCake: React.FC = () => {
               : "candle-flame-active"
           }`}
           style={{
-            width: `${30 * flameScale}px`, // Flame shrinks proportionally
-            height: `${50 * flameScale}px`,
-            top: `${40 * (1 - flameScale)}px`,
+            width: `${flameWidth}px`, // Flame shrinks proportionally
+            height: `${flameHeight}px`,
+            top: `${flameTop}px`,
             opacity: flameScale, // Opacity decreases as the flame shrinks
           }}
         />
