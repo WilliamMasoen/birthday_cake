@@ -8,7 +8,7 @@
     color: white;
     font-size: 50px;
     margin-right: 25px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 #refresh-button:hover {
@@ -18,7 +18,7 @@
 }
 
 .middle-container {
-    min-height: 69%;
+    min-height: 60%;
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -65,13 +65,58 @@
 .bottom-container {
     width: 100%;
     display: flex;
-    /* flex-direction: row;
-    justify-content: space-between;
-    min-height: 20%; */
 }
 
-/* .confetti-button-container {
-    margin: 0px 20px 20px 0px;
-    display: flex;
-    align-items: end;
-} */
+@media only screen and (min-width: 0px) {
+    .middle-container {
+        margin-top: 50px;
+        min-height: 70%;
+    }
+
+    #caption-title {
+        font-size: 45px;
+    }
+  }
+  
+  @media only screen and (min-width: 540px) {
+    .middle-container {
+        margin-top: 30px;
+    }
+
+    #caption-title {
+        font-size: 45px;
+    }
+  }
+  
+  @media only screen and (min-width: 640px) {
+    .middle-container {
+        margin-top: 10px;
+    }
+
+    #caption-title {
+        font-size: 53px;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .middle-container {
+        margin-top: -10px;
+        min-height: 50%;
+    }
+
+    #caption-title {
+        font-size: 63px;
+    }
+  }
+  
+  @media only screen and (min-width: 1025px) {
+    .middle-container {
+        margin-top: -20px;
+    }
+
+    #caption-title {
+        font-size: 70px;
+    }
+  }
+  
+  
