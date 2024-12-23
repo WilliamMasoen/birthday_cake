@@ -18,7 +18,7 @@ const BirthdayCake: React.FC = () => {
   const dataArrayRef = useRef<Uint8Array | null>(null);
 
   // Threshold value to determine when the candle gets extinguished
-  const threshold = 1000;
+  const threshold = 500;
 
   useEffect(() => {
     // Function to initialize audio processing
@@ -110,6 +110,7 @@ const BirthdayCake: React.FC = () => {
           style={{
             width: `${20 * flameScale}px`, // Flame shrinks proportionally
             height: `${40 * flameScale}px`,
+            top: `${40 * (1 - flameScale)}px`,
             opacity: flameScale, // Opacity decreases as the flame shrinks
           }}
         />
