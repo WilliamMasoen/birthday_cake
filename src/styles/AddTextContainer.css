@@ -1,8 +1,118 @@
 .add-text-container {
-    /* display: block; */
-    color: white;
-}
-
-.add-text-container-inactive {
+    width: 95%;
+    max-width: 800px; /* Increased maximum width */
+    background-color: #1a1b20;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 30px; /* Increased padding */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Slightly larger shadow */
+    position: absolute;
+    top: 30px; /* Adjusted positioning */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .add-text-container-inactive {
     display: none;
-}
+  }
+  
+  .add-text-form {
+    display: flex;
+    flex-direction: column;
+    width: 90%; /* Adjusted form width for balance */
+  }
+  
+  .add-text-title-container,
+  .add-text-content-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #add-text-description-input {
+    height: 300px; /* Increased textarea height */
+    width: 100%; /* Retain full width */
+    font-size: 1.1rem; /* Slightly larger font for readability */
+  }
+  
+  #add-text-title-label,
+  #add-text-description-input {
+    margin-bottom: 8px;
+    font-size: large;
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+  
+  #add-text-title-input,
+  #add-text-description-input {
+    padding: 12px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #2a2b30;
+    color: white;
+    resize: none;
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  #add-text-title-input:focus,
+  #add-text-description-input:focus {
+    border-color: hsl(243, 80%, 62%);
+    box-shadow: 0 0 5px hsl(243, 80%, 62%);
+  }
+  
+  .add-text-buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+  
+  #add-text-cancel-button,
+  #add-text-submit-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: Jura, sans-serif;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #add-text-cancel-button {
+    color: red;
+    background-color: transparent;
+    border: 1px solid red;
+  }
+  
+  #add-text-submit-button {
+    background-color: hsl(243, 80%, 62%);
+    color: white;
+    border: none;
+  }
+  
+  #add-text-cancel-button:hover,
+  #add-text-submit-button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media (max-width: 600px) {
+    .add-text-container {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    #add-text-title-input,
+    #add-text-description-input {
+      font-size: 0.9rem;
+    }
+  
+    #add-text-cancel-button,
+    #add-text-submit-button {
+      font-size: 0.9rem;
+      padding: 8px 15px;
+    }
+  }
+  

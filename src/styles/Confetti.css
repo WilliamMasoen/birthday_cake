@@ -1,9 +1,4 @@
-.add-text-button-container {
-    margin-left: 25px;
-    margin-top: 25px;
-}
-
-.add-text-button {
+.confetti-button {
     padding: 12px 24px;
     background-color: hsl(222, 100%, 95%);
     color: hsl(243, 80%, 62%);
@@ -15,13 +10,13 @@
     font-family: Jura;
 }
 
-.add-text-button span {
+.confetti-button span {
     z-index: 1;
     position: relative;
     font-size: 1.05rem;
 }
 
-.add-text-button::before {
+.confetti-button::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -35,12 +30,12 @@
     opacity: 0;
 }
 
-.add-text-button:hover span {
+.confetti-button:hover span {
     color: hsl(222, 100%, 95%);
     cursor: pointer;
 }
 
-.add-text-button:hover::before {
+.confetti-button:hover::before {
     opacity: 1;
     transition-duration: .85s;
     transform: translate3d(-50%,-50%,0) scale3d(1.2,1.2,1.2);

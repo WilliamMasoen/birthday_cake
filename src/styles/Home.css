@@ -1,0 +1,77 @@
+.top-container {
+    display: flex;
+    justify-content: space-between;
+    min-height: 8%;
+}
+
+#refresh-button {
+    color: white;
+    font-size: 50px;
+    margin-right: 25px;
+    margin-top: 10px;
+}
+
+#refresh-button:hover {
+    cursor: pointer;
+    transition: transform 0.2s;
+    transform: scale(1.07);
+}
+
+.middle-container {
+    min-height: 69%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cake-caption-container {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.audio-level-container {
+    width: 100%;
+}
+
+.caption {
+    color: white;
+    word-break: break-all;
+    text-align: center;
+}
+
+.caption-container {
+    width: 80%;
+}
+
+#caption-title {
+    margin-bottom: 20px;
+    font-size: 70px;
+    margin-top: 30px;
+}
+
+#caption-desc {
+    font-size: x-large;
+}
+
+.popup-container {
+    position: absolute;
+    width: 70%;
+    height: 700px;
+    margin-top: 50px;
+}
+
+.bottom-container {
+    width: 100%;
+    display: flex;
+    /* flex-direction: row;
+    justify-content: space-between;
+    min-height: 20%; */
+}
+
+/* .confetti-button-container {
+    margin: 0px 20px 20px 0px;
+    display: flex;
+    align-items: end;
+} */

@@ -1,10 +1,14 @@
 import "../styles/AddTextButton.css";
 
-function AddTextButton() {
+interface AddTextButtonProps {
+  onClick: () => void;
+}
+
+function AddTextButton({ onClick }: AddTextButtonProps) {
   return (
     <>
       <div className="add-text-button-container">
-        <button className="add-text-button">
+        <button className="add-text-button" onClick={onClick}>
           <span>Add Message</span>
         </button>
       </div>
