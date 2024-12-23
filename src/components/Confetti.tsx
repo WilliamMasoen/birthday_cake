@@ -1,24 +1,16 @@
 import "../styles/Confetti.css";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Confetti from "react-confetti";
 import { useWindowSize } from "react-use";
 
-const ConfettiComponent: React.FC = () => {
-  const [isConfettiActive, setIsConfettiActive] = useState(false);
+interface ConfettiComponentProps {
+  isActive: boolean; // Prop to control confetti activation
+}
+
+const ConfettiComponent: React.FC<ConfettiComponentProps> = ({ isActive }) => {
   const { width, height } = useWindowSize();
 
-  const toggleConfetti = () => {
-    setIsConfettiActive(!isConfettiActive);
-  };
-
-  return (
-    <div>
-      <button className="confetti-button" onClick={toggleConfetti}>
-        <span>{isConfettiActive ? "Stop Confetti" : "Start Confetti"}</span>
-      </button>
-      {isConfettiActive && <Confetti width={width} height={height} />}
-    </div>
-  );
+  return <div>{isActive && <Confetti width={width} height={height} />}</div>;
 };
 
 export default ConfettiComponent;

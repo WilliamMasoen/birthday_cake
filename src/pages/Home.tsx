@@ -91,9 +91,9 @@ function Home() {
         <div>
           <FooterContainer />
         </div>
-        {/* <div className="confetti-button-container">
+        <div className="confetti-button-container">
           <ConfettiComponent />
-        </div> */}
+        </div>
       </div>
     </>
   );

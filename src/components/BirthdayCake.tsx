@@ -1,5 +1,6 @@
 import "../styles/BirthdayCake.css";
 import React, { useEffect, useRef, useState } from "react";
+import ConfettiComponent from "./Confetti";
 import cake from "../assets/images/cake.png";
 
 const BirthdayCake: React.FC = () => {
@@ -92,6 +93,7 @@ const BirthdayCake: React.FC = () => {
 
   return (
     <div className="birthday-cake-container">
+      <ConfettiComponent isActive={isCandleExtinguished} />
       <p className="audio-level-text">
         Audio Level: {(audioLevel * 1000).toFixed(2)}
       </p>

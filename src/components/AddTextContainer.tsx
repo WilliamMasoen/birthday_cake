@@ -47,7 +47,7 @@ function AddTextContainer({
       >
         <form name="add-text-form" className="add-text-form">
           <div className="add-text-title-container">
-            <label id="add-text-title-label">Title*:</label>
+            <label id="add-text-title-label">Title*</label>
             <input
               type="text"
               name="title"
@@ -59,6 +59,7 @@ function AddTextContainer({
             />
           </div>
           <div className="add-text-content-container">
+            <label id="add-text-title-label">Message</label>
             <textarea
               type="text"
               name="description"
@@ -83,7 +84,7 @@ function AddTextContainer({
                 type="button"
                 name="add-text-submit-button"
                 id="add-text-submit-button"
-                value="Add Message!"
+                value="Add Message"
                 onClick={handleSubmitButton}
               />
             </div>
