@@ -76,6 +76,10 @@
     #caption-title {
         font-size: 45px;
     }
+
+    .popup-container {
+        margin-top: 0px;
+    }
   }
   
   @media only screen and (min-width: 540px) {
@@ -86,6 +90,10 @@
     #caption-title {
         font-size: 45px;
     }
+
+    .popup-container {
+        margin-top: 10px;
+    }
   }
   
   @media only screen and (min-width: 640px) {
@@ -95,6 +103,10 @@
 
     #caption-title {
         font-size: 53px;
+    }
+
+    .popup-container {
+        margin-top: 30px;
     }
   }
   
@@ -107,6 +119,10 @@
     #caption-title {
         font-size: 63px;
     }
+
+    .popup-container {
+        margin-top: 50px;
+    }
   }
   
   @media only screen and (min-width: 1025px) {
@@ -116,6 +132,10 @@
 
     #caption-title {
         font-size: 70px;
+    }
+
+    .popup-container {
+        margin-top: 50px;
     }
   }
   
