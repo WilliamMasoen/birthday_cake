@@ -12,6 +12,7 @@
     top: 30px; /* Adjusted positioning */
     left: 50%;
     transform: translateX(-50%);
+    z-index: 999; /* Ensure footer container doesn't overlap on top of buttons here */
   }
   
   .add-text-container-inactive {
@@ -84,7 +85,6 @@
     color: red;
     background-color: transparent;
     border: 1px solid red;
-    z-index: 1000;
   }
   
   #add-text-submit-button {
