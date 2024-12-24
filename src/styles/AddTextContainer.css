@@ -84,6 +84,7 @@
     color: red;
     background-color: transparent;
     border: 1px solid red;
+    z-index: 1000;
   }
   
   #add-text-submit-button {
