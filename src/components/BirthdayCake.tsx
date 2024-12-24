@@ -19,6 +19,15 @@ const BirthdayCake: React.FC = () => {
 
   const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
 
+  let threshold = 350;
+
+  // Adjust the flame size based on screen width
+  if (screenWidth < 540) {
+    threshold = 200;
+  } else if (screenWidth < 768) {
+    threshold = 230;
+  }
+
   useEffect(() => {
     // Update the screen width on resize
     const handleResize = () => {
@@ -31,9 +40,6 @@ const BirthdayCake: React.FC = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-  // Threshold value to determine when the candle gets extinguished
-  const threshold = 500;
 
   useEffect(() => {
     // Function to initialize audio processing
