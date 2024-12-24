@@ -9,13 +9,15 @@ import BirthdayCake from "../components/BirthdayCake";
 function Home() {
   const [status, setStatus] = useState<boolean>(false);
 
-  const toggleStatus = () => {
-    if (tmpContent.title.trim() !== "") {
-      setContent({
-        ...content,
-        title: tmpContent.title,
-        description: tmpContent.description,
-      });
+  const toggleStatus = (is_add: boolean) => {
+    if (is_add) {
+      if (tmpContent.title.trim() !== "") {
+        setContent({
+          ...content,
+          title: tmpContent.title,
+          description: tmpContent.description,
+        });
+      }
     }
 
     setStatus(!status);

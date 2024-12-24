@@ -11,7 +11,7 @@ interface AddTextContainerProps {
   content: Content;
   tmpContent: Content;
   onChange: (name: string, value: string) => void;
-  onClick: () => void;
+  onClick: (is_add: boolean) => void;
 }
 
 function AddTextContainer({
@@ -37,12 +37,12 @@ function AddTextContainer({
     if (tmpContent.title.trim() === "") {
       alert("Birthday title is empty!");
     } else {
-      onClick();
+      onClick(true);
     }
   };
 
   const handleCancelButton = () => {
-    onClick();
+    onClick(false);
   };
 
   return (
