@@ -1,5 +1,6 @@
 .add-text-container {
     width: 95%;
+    min-width: 350px;
     max-width: 800px; /* Increased maximum width */
     background-color: #1a1b20;
     border-radius: 10px;
